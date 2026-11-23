@@ -1,0 +1,43 @@
+# Python
+.venv/
+__pycache__/
+*.py[cod]
+*.egg-info/
+build/
+dist/
+.pytest_cache/
+.numba_cache/
+.ipynb_checkpoints/
+.coverage
+htmlcov/
+
+# OS / editors
+.DS_Store
+.idea/
+.vscode/
+*.swp
+
+# MATLAB / RISE working files
+*.asv
+*.m~
+validation/matlab/*_steady_state__.m
+validation/matlab/*.log
+
+# Local working notes, not part of the package
+AGENTS_BRIEF.md
+TRANSLATE_BRIEF.md
+INVENTARIO_RISE.md
+CLAUDE.md
+.claude/
+
+# Private local work, not part of the package
+examples/tese/
+examples/thesis/
+validation/thesis/
+tests/test_thesis.py
+validation/matlab/ref_thesis.m
+validation/matlab/ref_antic.m
+validation/matlab/ref_analysis.m
+validation/ref/thesis.mat
+validation/ref/antic.mat
+validation/ref/analysis.mat

@@ -1,0 +1,150 @@
+method	option	default	check	message
+solve	solve_function_mode(sr)	'explicit'	@(x)ismember(x,{'explicit','disc','vectorized'})	solve_function_mode must be one of "explicit","disc","vectorized"
+solve	solve_derivatives_type(sr)	'symbolic'	@(x)ismember(x,{'symbolic','numerical','automatic'})	solve_derivatives_type must be one of "symbolic","numerical","automatic"
+solve	solve_bgp(sr)	0	@(x)islogical(x)	solve_bgp must be true or false
+solve	solve_sstate_blocks(sr)	0	@(x)islogical(x)	solve_sstate_blocks must be true or false
+solve	solve_linear(sr)	0	@(x)islogical(x)	solve_linear must be true or false
+solve	steady_state_file(sr)	''	@(x)functype(x)	steady_state_file must be empty or char or a function handle
+solve	steady_state_use_steady_state_model(sr)	1	@(x)islogical(x)	steady_state_use_steady_state_model must be true or false
+solve	steady_state_solver(sr)	'lsqnonlin'	@(x)ischar(x)||isa(x,'function_handle')	steady_state_solver must be char or a function handle
+solve	steady_state_algorithm(sr)	cell [1 2]	@(x)ischar(x)||iscell(x)	steady_state_algorithm must be a char or a cell
+solve	steady_state_unique(sr)	0	@(x)islogical(x)	steady_state_unique must be true or false
+solve	steady_state_imposed(sr)	0	@(x)islogical(x)	steady_state_imposed must be true or false
+solve	steady_state_loop(sr)	0	@(x)islogical(x)	steady_state_loop must be true or false
+solve	steady_state_use_jacobian(sr)	0	@(x)islogical(x)	steady_state_use_jacobian must be true or false
+solve	steady_state_endo_param_swap(sr)	[]	@(x)isempty(x)||(iscell(x)&&size(x,2)==3)	steady_state_endo_param_swap must be empty or a n x 3 cell {endogNames,endogValues,paramNames}
+solve	steady_state_fixed(sr)	0	@(x)islogical(x)	steady_state_fixed must be true or false
+solve	steady_state_bounds(r)	[]	@(x)isempty(x)||isstruct(x)	steady_state_bounds must be empty or a structure whose field names are the endogenous variables
+solve	solver(r)	[]	@(x)algotype(x)	solver can be empty, a char, a cell or a function handle
+solve	solve_order(r)	1	@(x)num_fin_int(x)&&x>0&&x<=5	solve_order must be a finite integer in [1,5]
+solve	solve_shock_horizon(r)	[]	@(x)isstruct(x)||num_fin_int(x)	solve_shock_horizon must be >=0 or a structure whose fieldnames are the shocks
+solve	solve_initialization(r)	'backward'	@(x)ismember(x,{'zeros','backward','random'})	solve_initialization must be 'zeros','backward' or 'random'
+solve	solve_log_approx_vars(r)	[]	@(x)isempty(x)||ischar(x)||iscellstr(x)	solve_log_approx_vars must be a char or a cellstr
+solve	solve_accelerate(r)	0	@(x)islogical(x)	solve_accelerate must be true or false
+solve	solve_linsyst_user_algo(r)	''	@(x)algotype(x)	solve_linsyst_user_algo must be a char, a cell or a function handle
+solve	solve_check_stability	1	@(x)islogical(x)	solve_check_stability must be true or false
+solve	solve_automatic_differentiator	aplanar.diff	@(x)isa(x,'function_handle')	solve_automatic_differentiator must be a function handle
+solve	solve_occbin	[]	@(x)isempty(x)||(iscell(x)&&numel(x)==3&&(num_fin_int(x{1})&&x{1}>0))||(num_fin_int(x)&&x>0)	solve_occbin must be a positive integer or a three-element cell whose first element is a positive integer, the second a structure mapping the restrictions and the markov chains and the third the regimes
+solve	solve_bgp_shift	5	@(x)(num_fin_int(x)&&x>0)	solve_bgp_shift must be a positive integer
+solve	solve_reuse_solution	0	@(x)islogical(x)	solve_reuse_solution must be true or false
+solve	solve_derivatives_only	0	@(x)islogical(x)	solve_derivatives_only must be true or false
+solve	solve_user_defined_shocks(r)	''	@(x)isempty(x)||isstruct(x)	solve_user_defined_shocks must be empty or a structure whose fields are the names of the shocks. See help
+solve	solve_perturbation_type(r)	'maih'	@(x)perturbation_type(x)	solve_perturbation_type must be "m","maih","mw","maih_waggoner","frwz"or {"frwz",part_list} where part_list is a cellstr with the list of the partitioned parameters
+solve	solve_kill_g(r)	1	@(x)islogical(x)	solve_kill_g must be true or false
+solve	fix_point_TolFun(r)	1.49011611938477e-08	@(x)num_fin(x)&&x>0	fix_point_TolFun must be a finite and positive scalar
+solve	fix_point_maxiter	1000	@(x)num_fin_int(x)	fix_point_maxiter must be a finite and positive integer
+solve	fix_point_verbose(r)	0	@(x)islogical(x)	fix_point_verbose must be a logical
+solve	fix_point_explosion_limit(r)	1000000000000	@(x)num_fin_int(x)	fix_point_explosion_limit must be a finite and positive integer
+solve	fix_point_valid_func(r)	utils.error.valid	@(x)isa(x,'function_handle')	fix_point_valid_func must be a function handle
+solve	lc_algorithm	'short'	@(x)ismember(x,{'short','long'})	lc_algorithm must be a logical "short" or "long"
+solve	lc_reconvexify	0	@(x)islogical(x)	lc_reconvexify must be a logical
+solve	lc_use_pinv	1	@(x)islogical(x)	lc_use_pinv must be a logical
+filter	kf_ergodic	1	@(x)islogical(x)	kf_ergodic must be true or false
+filter	kf_init_variance	[]	@(x)isempty(x)||(num_fin(x)&&x>0)	kf_init_variance must be a positive scalar
+filter	kf_presample	0	@(x)num_fin_int(x)	kf_presample must be zero or a positive integer
+filter	kf_user_init	[]	@(x)isempty(x)||(iscell(x)&&numel(x)<=3)	kf_user_init must be a cell with number of entries <=3
+filter	kf_tol	1e-20	@(x)num_fin(x)&&x>=0	kf_tol must be >=0
+filter	kf_filtering_level	3	@(x)any(x==(0:3))	kf_filtering_level must be 0,1,2 or 3
+filter	kf_riccati_tol	1e-06	@(x)num_fin(x)&&x>=0	kf_riccati_tol must be >=0
+filter	kf_nsteps	1	@(x)num_fin_int(x)&&x>=1	kf_nsteps must be an integer >=1
+filter	kf_user_algo	''	@(x)isempty(x)||iscell(x)||ischar(x)||isa(x,'function_handle')	kf_user_algo must be a char, a cell, or a function handle
+filter	kf_nan_future_obs_means_missing	1	@(x)islogical(x)	kf_nan_future_obs_means_missing must be a logical
+filter	kf_householder_chol	0	@(x)islogical(x)	kf_householder_chol must be a logical
+filter	lyapunov_algo	'doubling'	@(x)ismember(x,{'doubling','schur'})	lyapunov_algo must be doubling or schur
+filter	lyapunov_diffuse_factor	1	@(x)num_fin(x)&&x>=0	lyapunov_diffuse_factor must be >=0
+filter	fix_point_verbose(r)	0	@(x)islogical(x)	fix_point_verbose must be a logical
+estimate	estim_barrier	0	@(x)islogical(x)	estim_barrier must be a logical
+estimate	estim_start_from_mode	[]	@(x)islogical(x)	estim_start_from_mode must be a logical
+estimate	estim_penalty_factor	10	@(x)num_fin(x)&&x>0	estim_penalty_factor must be a finite and positive scalar
+estimate	estim_penalty	100000000	@(x)num_fin(x)&&x>0	estim_penalty must be a finite and positive scalar
+estimate	estim_max_trials	500	@(x)num_fin_int(x)&&x>0	estim_max_trials must be a finite and positive integer
+estimate	estim_parallel	1	@(x)num_fin_int(x)&&x>0	estim_parallel must be a positive integer
+estimate	estim_start_date	''	@(x)isempty(x)||is_date(x)||is_serial(x)	estim_start_date must be a valid date
+estimate	estim_end_date	''	@(x)isempty(x)||is_date(x)||is_serial(x)	estim_end_date must be a valid date
+estimate	estim_start_vals	[]	@(x)isstruct(x)	estim_start_vals must be a struct
+estimate	estim_general_restrictions	[]	@(x)ischar(x)||iscell(x)||isa(x,'function_handle')	estim_general_restrictions must be a char, a cell or a function handle
+estimate	estim_linear_restrictions	[]	@(x)iscell(x)&&size(x,2)==2	estim_linear_restrictions must be a two-column cell
+estimate	estim_nonlinear_restrictions	[]	@(x)iscellstr(x)	estim_nonlinear_restrictions must be a cell array of strings
+estimate	estim_blocks	[]	@(x)iscell(x)	estim_blocks must be a cell array with groupings of parameter names
+estimate	estim_endogenous_priors	[]	@(x)isa(x,'function_handle')	estim_endogenous_priors must be a functio handle
+estimate	optimset(sr)	struct	@(x)isstruct(x)	optimset must be a structure
+estimate	optimizer	'fmincon'	@(x)ischar(x)||iscell(x)||isa(x,'function_handle')	optimizer must be a char, a cell or a function handle
+estimate	estim_priors	[]	@(x)isstruct(x)	estim_priors must be a structure
+irf	irf_shock_list	''	@(x)ischar(x)||iscellstr(x)	irf_shock_list must be char or cellstr
+irf	irf_var_list	''	@(x)ischar(x)||iscellstr(x)	irf_var_list must be char or cellstr
+irf	irf_periods	40	@(x)num_fin_int(x)	irf_periods must be a finite and positive integer
+irf	irf_shock_sign	1	@(x)num_fin(x)&&x~=0	irf_shock_sign must be a numeric scalar different from 0
+irf	irf_draws	50	@(x)num_fin_int(x)	irf_draws must be a finite and positive integer
+irf	irf_type	'irf'	@(x)any(strcmp(x,{'irf','girf'}))	irf_type must be irf or girf
+irf	irf_regime_specific	1	@(x)islogical(x)	irf_regime_specific must be a logical
+irf	irf_use_historical_data	0	@(x)islogical(x)	irf_use_historical_data must be a logical
+irf	irf_to_time_series	1	@(x)islogical(x)	irf_to_time_series must be a logical
+irf	irf_girf_regime_uncertainty	1	@(x)islogical(x)	irf_girf_regime_uncertainty must be a logical
+irf	irf_anticipate	1	@(x)islogical(x)	irf_anticipate must be true or false
+simulate	simul_sig	1	@(x)num_fin_int(x)&&x>=0	simul_sig must be >=0
+simulate	simul_pruned	0	@(x)islogical(x)	simul_pruned must be a logical
+simulate	simul_order	[]	@(x)num_fin_int(x)&&x>=1	simul_order must be a positive integer
+simulate	simul_fbs_horizon	0	@(x)num_fin_int(x)	simul_fbs_horizon must be a finite and positive integer
+simulate	simul_periods	100	@(x)num_fin_int(x)	simul_periods must be a finite and positive integer
+simulate	simul_burn	100	@(x)num_fin_int(x)	simul_burn must be a finite and positive integer
+simulate	simul_historical_data	ts	@(x)isa(x,'ts')||isstruct(x)	simul_historical_data must be a time series or a structure
+simulate	simul_history_end_date	''	@(x)is_date(x)||is_serial(x)	simul_history_end_date must be a valid date
+simulate	simul_regime	[]	@(x)isa(x,'function_handle')||(isa(x,'cell')&&isa(x{1},'function_handle'))||(num_vec_fin_int(x)&&all(x>=1))	simul_regime must be a finite and positive vector of integers OR a function handle OR a cell array whose first element is a function handle
+simulate	simul_bgp_deviation(r)	0	@(x)islogical(x)	simul_bgp_deviation must be a logical
+simulate	simul_anticipate_zero	0	@(x)islogical(x)	simul_anticipate_zero must be a logical
+simulate	simul_honor_constraints_through_switch	0	@(x)islogical(x)	simul_honor_constraints_through_switch must be a logical
+simulate	simul_shock_uncertainty	1	@(x)islogical(x)	simul_shock_uncertainty must be a logical
+simulate	simul_to_time_series	1	@(x)islogical(x)	simul_to_time_series must be a logical
+simulate	simul_frwrd_back_shoot	0	@(x)islogical(x)	simul_frwrd_back_shoot must be a logical
+simulate	simul_honor_constraints	0	@(x)islogical(x)	simul_honor_constraints must be a logical
+simulate	simul_hpfilter_lambda	[]	@(x)num_fin(x)&&x>0	 simul_hpfilter_lambda must be >0
+forecast	forecast_cond_endo_vars	''	@(x)ischar(x)||iscellstr(x)	forecast_cond_endo_vars must be char or cellstr
+forecast	forecast_cond_exo_vars	''	@(x)ischar(x)||iscellstr(x)	forecast_cond_exo_vars must be char or cellstr
+forecast	forecast_endo_exo_vars	''	@(x)ischar(x)||iscellstr(x)	forecast_endo_exo_vars must be char or cellstr
+forecast	forecast_to_time_series	1	@(x)islogical(x)	forecast_to_time_series must be a logical
+forecast	forecast_nsteps	12	@(x)num_fin_int(x)&&x>0	forecast_nsteps must be a finite and positive integer
+forecast	forecast_shock_uncertainty	0	@(x)islogical(x)	forecast_shock_uncertainty must be a logical
+forecast	forecast_start_date	''	@(x)is_date(x)||is_serial(x)	forecast_start_date must be a valid date
+forecast	forecast_conditional_hypothesis	'default'	@(x)ismember(x,hypotheses)	forecast_conditional_hypothesis must be one of default|jma|ncp|econ|nas|
+forecast	nsteps	[]	@(x)isnumeric(x)&&isscalar(x)&&x>0&&floor(x)==ceil(x)	nsteps must be a positive integer
+forecast	forecast_conditional_sampling_algo	'rejection'	@(x)ismember(x,algorithms)	algorithm must be one of rejection|gibbs|ghk|
+forecast	forecast_conditional_sampling_ndraws	1	@(x)num_fin_int(x)&&x>0	forecast_conditional_sampling_ndraws must be a positive scalar
+forecast	forecast_conditional_sampling_burnin	0	@(x)num_fin_int(x)	forecast_conditional_sampling_burnin must be a positive scalar
+forecast	forecast_conditional_sampling_thinning	1	@(x)num_fin_int(x)&&x>0	forecast_conditional_sampling_thinning must be a positive scalar
+forecast	forecast_conditional_sampling_max_rejection_attempts	500	@(x)num_fin_int(x)	forecast_conditional_sampling_max_rejection_attempts must be a positive scalar
+forecast	S	[]	@(x)Stmp(x)	temporary variable S must be empty|struct|matrix
+variance_decomposition	vardec_shocks	''	@(x)ischar(x)||iscellstr(x)	vardec_shocks must be char or cellstr
+variance_decomposition	vardec_periods	[1 4 8 16 40 100 200 400]	@(x)isvector(x)&&all(num_fin_int(x))	all vardec_periods must be a finite and positive integer
+variance_decomposition	vardec_theoretical	1	@(x)islogical(x)	vardec_theoretical must be a logical
+variance_decomposition	vardec_ergodic	0	@(x)islogical(x)	vardec_ergodic must be a logical
+posterior_simulator	ERROR	Undefined function 'posterior_simulator' for input arguments of type 'rise'.		
+simulation_diagnostics	ERROR	Undefined function 'simulation_diagnostics' for input arguments of type 'rise'.		
+check_optimum	ERROR	Undefined function 'check_optimum' for input arguments of type 'rise'.		
+log_marginal_data_density	ERROR	Undefined function 'log_marginal_data_density' for input arguments of type 'rise'.		
+is_stable_system	stability_criterion	1.000001	@(x)num_fin(x)&&x>=1	stability_criterion must be >=1
+is_stable_system	stability_algorithm	'gmh'	@(x)ismember(x,{'gmh','cfm'})	stability_algorithm must be 'gmh' or 'cfm'
+theoretical_autocovariances	autocov_ar	5	@(x)num_fin_int(x)	autocov_ar must be a finite and positive integer
+theoretical_autocovariances	autocov_model_resolve	1	@(x)islogical(x)	autocov_model_resolve should be true or false
+simulate_nonlinear	simul_exogenous_func	''	@(x)isa(x,'function_handle')	simul_exogenous_func must be a function handle
+simulate_nonlinear	simul_stack_solve_algo	'sparse'	@(x)ismember(x,{'fsolve','lsqnonlin','sparse','lbj'})	simul_stack_solve_algo must be 'fsolve','lsqnonlin','sparse' or 'lbj'
+simulate_nonlinear	simul_recursive	0	@(x)islogical(x)	simul_recursive must be a logical
+simulate_nonlinear	simul_sparse	1	@(x)islogical(x)	simul_sparse must be a logical
+filter_initialization	kf_ergodic	1	@(x)islogical(x)	kf_ergodic must be true or false
+filter_initialization	kf_init_variance	[]	@(x)isempty(x)||(num_fin(x)&&x>0)	kf_init_variance must be a positive scalar
+filter_initialization	kf_presample	0	@(x)num_fin_int(x)	kf_presample must be zero or a positive integer
+filter_initialization	kf_user_init	[]	@(x)isempty(x)||(iscell(x)&&numel(x)<=3)	kf_user_init must be a cell with number of entries <=3
+filter_initialization	kf_tol	1e-20	@(x)num_fin(x)&&x>=0	kf_tol must be >=0
+filter_initialization	kf_filtering_level	3	@(x)any(x==(0:3))	kf_filtering_level must be 0,1,2 or 3
+filter_initialization	kf_riccati_tol	1e-06	@(x)num_fin(x)&&x>=0	kf_riccati_tol must be >=0
+filter_initialization	kf_nsteps	1	@(x)num_fin_int(x)&&x>=1	kf_nsteps must be an integer >=1
+filter_initialization	kf_user_algo	''	@(x)isempty(x)||iscell(x)||ischar(x)||isa(x,'function_handle')	kf_user_algo must be a char, a cell, or a function handle
+filter_initialization	kf_nan_future_obs_means_missing	1	@(x)islogical(x)	kf_nan_future_obs_means_missing must be a logical
+filter_initialization	kf_householder_chol	0	@(x)islogical(x)	kf_householder_chol must be a logical
+filter_initialization	lyapunov_algo	'doubling'	@(x)ismember(x,{'doubling','schur'})	lyapunov_algo must be doubling or schur
+filter_initialization	lyapunov_diffuse_factor	1	@(x)num_fin(x)&&x>=0	lyapunov_diffuse_factor must be >=0
+filter_initialization	fix_point_verbose(r)	0	@(x)islogical(x)	fix_point_verbose must be a logical
+prior_plots	ERROR	Undefined function 'prior_plots' for input arguments of type 'rise'.		
+optimal_policy_solver_h	ERROR	Undefined function 'optimal_policy_solver_h' for input arguments of type 'rise'.		
+solve_alternatives	solve_alternatives_nsim	100	@(x)num_fin_int(x)	solve_alternatives_nsim must be a finite and positive integer
+load_data	data	ts	@(x)isa(x,'ts')||isstruct(x)	data must be a ts or a structure of ts
+load_data	data_demean	0	@(x)islogical(x)	data_demean must be a logical

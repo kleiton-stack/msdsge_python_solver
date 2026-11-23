@@ -1,0 +1,110 @@
+89 model files, 99 cases (a file may have more than one variant); 70 files with at least one case solved
+
+== ok: 77 of 99 cases
+   MarkovSwitching/FarmerWaggonerZha2010/fwz10_nasty.rs [parameterisation 1]  n=2 h=2 mnk radius=0.8100 | RISE: ss diff 0.0e+00, IRF diff 1.6e-14 (scale 1.2e+01) E->PAI r1
+   MarkovSwitching/FarmerWaggonerZha2010/fwz10_nasty.rs [parameterisation 2]  n=2 h=2 mnk radius=0.3884 | RISE: ss diff 0.0e+00, IRF diff 2.6e-15 (scale 1.7e+00) E->PAI r2
+   MarkovSwitching/FarmerWaggonerZha2010/fwz10_nasty.rs [parameterisation 3]  n=2 h=2 mnk radius=0.5286 | RISE: ss diff 0.0e+00, IRF diff 3.6e-14 (scale 1.3e+00) E->PAI r1
+   MarkovSwitching/FoersterRubioRamirezWaggonerZha/QE2016/rbcs.rs [unique point]  n=3 h=2 mfi radius=0.9394 | RISE: ss diff 3.6e-15, IRF diff 2.8e-07 (scale 4.6e-01) E->K r2
+   MarkovSwitching/FoersterRubioRamirezWaggonerZha/frwz_nk.rs  n=3 h=2 mfi radius=0.4548 | RISE: ss diff 0.0e+00, IRF diff 4.8e-11 (scale 9.3e-03) EPS_R->Y r2
+   MarkovSwitching/FoersterRubioRamirezWaggonerZha/wp1301/nk.rs  n=3 h=2 mfi radius=0.4532 | RISE: ss diff 0.0e+00, IRF diff 4.4e-11 (scale 9.3e-03) EPS_R->Y r2
+   MarkovSwitching/FoersterRubioRamirezWaggonerZha/wp1301/nkh.rs  n=5 h=2 mfi radius=0.4852 | RISE: ss diff 1.1e-16, IRF diff 3.4e-12 (scale 2.6e-03) E->C r2
+   MarkovSwitching/FoersterRubioRamirezWaggonerZha/wp1301/rbcs.rs  n=3 h=2 mfi radius=0.9315 | RISE: ss diff 2.0e-09, IRF diff 1.2e-08 (scale 1.0e-02) E->K r2
+   MarkovSwitching/FoersterRubioRamirezWaggonerZha/wp1301/rbcs0.rs  n=3 h=1 mfi radius=0.9280 | RISE: ss diff 1.3e-09, IRF diff 9.2e-13 (scale 8.0e-03) E->K r1
+   MarkovSwitching/FoersterRubioRamirezWaggonerZha/wp1416/rbcs.rs [unique point]  n=3 h=2 mfi radius=0.9394 | RISE: ss diff 3.6e-15, IRF diff 2.8e-07 (scale 4.6e-01) E->K r2
+   MarkovSwitching/FoersterRubioRamirezWaggonerZha/wp1416/simple.rs  n=1 h=2 mfi radius=0.0000 | RISE: ss diff 0.0e+00, IRF diff 0.0e+00 (scale 0.0e+00) 
+   MarkovSwitching/GavinKeenRichterThrockmorton/constant.rs  n=13 h=1 mfi radius=0.9145 | RISE did not solve: Error using parser.capture_equations Invalid expression. Check for missing multiplication 
+   MarkovSwitching/GavinKeenRichterThrockmorton/globdynzlb.rs  n=13 h=2 mfi radius=0.9462 | RISE: ss diff 1.7e-12, IRF diff 1.0e-09 (scale 1.8e+00) EZ->K r1
+   MarkovSwitching/SmetsWouters/usmodel.rs  n=40 h=2 mnk radius=0.9954 | RISE: ss diff 1.4e-14, IRF diff 1.3e-13 (scale 2.9e+00) ea->inve r2
+   ModelWithMeasurementErrors/Canonical_Const.rs  n=14 h=1 mfi radius=0.8589 | RISE did not solve: Error using parser.capture_equations Invalid expression. Check for missing multiplication 
+   ModelsWithSteadyStateFile/Canonical_Const.rs  n=14 h=1 mfi radius=0.8589 | RISE: ss diff 0.0e+00, IRF diff 5.4e-13 (scale 1.4e+00) EPAI->RN3M_NW r1
+   MonteCarloFiltering/trinity.rs  n=6 h=1 mfi radius=0.6317 | RISE: ss diff 0.0e+00, IRF diff 8.6e-11 (scale 2.4e+01) EPAI->RS r1
+   Nonlinear3rdOrder/Binning/rudebusch_swanson.rs  n=24 h=1 mfi radius=0.9025 | RISE: ss diff 1.7e-13, IRF diff 2.4e-11 (scale 1.5e+00) EPSA->VK r1
+   Nonlinear3rdOrder/Binning/small_nk.rs  n=11 h=1 mfi radius=0.6400 | RISE: ss diff 0.0e+00, IRF diff 7.8e-13 (scale 4.9e-01) EZ->J r1
+   Nonlinear3rdOrder/Binning/small_nk.rs [log_vars C R K]  n=11 h=1 mfi radius=0.6400 | RISE: ss diff 0.0e+00, IRF diff 7.8e-13 (scale 3.6e-01) EZ->J r1
+   NonlinearModels/fs2000.rs [steady-state file]  n=16 h=1 mfi radius=0.9316 | RISE: ss diff 0.0e+00, IRF diff 6.8e-10 (scale 6.5e-01) e_m->R r1
+   NonlinearModels/fs2000_b.rs [approximate=0]  n=16 h=1 mfi radius=0.9316 | RISE: ss diff 0.0e+00, IRF diff 6.8e-10 (scale 6.5e-01) e_m->R r1
+   NonlinearModels/fs2000_b.rs [approximate=1]  n=16 h=1 mfi radius=0.9316 | RISE: ss diff 1.3e-11, IRF diff 6.8e-10 (scale 6.5e-01) e_m->R r1
+   OptimalSimpleRules/Canonical_osr.rs  n=8 h=1 mfi radius=0.8589
+   StochasticReplanning/Canonical.rs  n=8 h=2 mfi radius=0.3542
+   StochasticReplanning/Estimation_examples/Canonical_plain.rs  n=11 h=1 mfi radius=0.3526
+   StochasticReplanning/Estimation_examples/usmodel_sr_switch.rs  n=42 h=1 mfi radius=0.9954
+   StochasticReplanning/usmodel_ms_lc.rs  n=40 h=1 mfi radius=0.9954
+   VariousModels/FrankSchorfheide/LossFunction_JAE2000/fs2000_rise.rs  n=16 h=1 mfi radius=0.9316 | RISE: ss diff 0.0e+00, IRF diff 6.8e-10 (scale 6.5e-01) e_m->R r1
+   VariousModels/HybridExpectations/hybrid_expect.rs  n=10 h=1 mfi radius=0.3049 | RISE: ss diff 0.0e+00, IRF diff 1.8e-01 (scale 6.8e-01) EPAI->PAI r1
+   VariousModels/KaijiTutorial/kaiji1207_exp.rs  n=8 h=1 mfi radius=0.9216 | RISE: ss diff 9.9e-12, IRF diff 2.2e-13 (scale 3.3e-02) EPS_B->K r1
+   VariousModels/PeterIreland/Endogenous_JME2003/emosp.rs  n=25 h=1 mfi radius=0.9582 | RISE: ss diff 0.0e+00, IRF diff 3.2e-04 (scale 9.3e+02) EPS_X->M r1
+   VariousModels/PeterIreland/Endogenous_JME2003/emosp.rs [log_vars of the states]  n=25 h=1 mfi radius=0.9582 | RISE: ss diff 6.4e-12, IRF diff 1.5e-06 (scale 2.0e+02) EPS_X->Y r1
+   VariousModels/PeterIreland/Endogenous_JME2003/emosp_full.rs  n=25 h=1 mfi radius=0.9807 | RISE: ss diff 3.3e-11, IRF diff 2.2e-04 (scale 1.5e+02) EPS_Z->M r1
+   VariousModels/PeterIreland/Endogenous_JME2003/emosp_linear.rs [original=False]  n=25 h=1 mfi radius=0.9582 | RISE: ss diff 1.3e-36, IRF diff 8.2e-12 (scale 3.1e-01) EPS_X->LI r1
+   VariousModels/PeterIreland/Endogenous_JME2003/emosp_linear.rs [original=True]  n=25 h=1 mfi radius=0.9582 | RISE: ss diff 8.5e-37, IRF diff 7.9e-12 (scale 3.1e-01) EPS_X->LI r1
+   VariousModels/PeterIreland/Endogenous_JME2003/emosp_ssmodel.rs  n=25 h=1 mfi radius=0.9582 | RISE: ss diff 1.8e-11, IRF diff 3.2e-04 (scale 9.3e+02) EPS_X->M r1
+   VariousModels/PeterIreland/Method_JEDC2004/ireland2004.rs  n=15 h=1 mfi radius=0.9974 | RISE: ss diff 2.2e-11, IRF diff 9.6e-10 (scale 8.8e+01) EPS->K r1
+   VariousModels/PeterIreland/NKperspective_JMCB2011/nkp.rs  n=15 h=1 mfi radius=0.5625 | RISE: ss diff 0.0e+00, IRF diff 8.3e-13 (scale 3.0e-01) EPS_A->LAMBDA r1
+   VariousModels/PeterIreland/NKperspective_JMCB2011/nkp_switch.rs  n=15 h=4 mfi radius=0.9598 | RISE: ss diff 1.1e-16, IRF diff 5.7e-09 (scale 5.1e-01) EPS_A->LAMBDA r4
+   VariousModels/PeterIreland/Targets_JMCB2007/targets.rs  n=21 h=1 mfi radius=0.5625 | RISE: ss diff 0.0e+00, IRF diff 9.9e-14 (scale 1.0e+00) EPS_A->LAMBDA r1
+   VariousModels/PeterIreland/Targets_JMCB2007/targets_lin.rs  n=18 h=1 mfi radius=0.5625 | RISE: ss diff 0.0e+00, IRF diff 8.3e-14 (scale 1.4e-02) EPS_A->LAMBDA r1
+   VariousModels/PeterIreland/productivity_RED2008/pdk.rs  n=28 h=1 mfi radius=0.9047 | RISE: ss diff 0.0e+00, IRF diff 5.0e-10 (scale 6.6e-01) EG_I->Z_I r1
+   VariousModels/PeterIreland/sgusea_JEEA2013/sgusea12.rs  n=70 h=1 mfi radius=0.9925 | RISE: ss diff 0.0e+00, IRF diff 3.0e-11 (scale 1.5e+00) EZ_F->D_H r1
+   VariousModels/SeonghoonCho/woodford2003.rs [multiple=False]  n=4 h=1 mfi radius=0.6400 | RISE: ss diff 0.0e+00, IRF diff 1.0e-12 (scale 2.3e+00) EPS->Y r1
+   VariousModels/SeonghoonCho/woodford2003.rs [multiple=True]  n=4 h=1 mfi radius=0.6400 | RISE did not solve: Maximum Number of iterations reached or multiple solutions
+   VariousModels/SmetsWouters/usmodel.rs  n=40 h=1 mfi radius=0.9954 | RISE: ss diff 1.5e-06, IRF diff 1.1e-10 (scale 3.7e+00) ea->inve r1
+   VariousModels/TaoZha/LWZ_Econometrica2013/lwz_model.rs  n=35 h=1 mfi radius=0.9995 | RISE: ss diff 0.0e+00, IRF diff 2.7e-10 (scale 6.0e-01) Eps_phi->Mub r1
+   VariousModels/TaoZha/LWZ_Econometrica2013/lwz_switch_model.rs  n=35 h=2 mfi radius=0.9995 | RISE: ss diff 0.0e+00, IRF diff 4.7e-10 (scale 1.0e+00) Eps_phi->Mub r2
+   VariousModels/TaoZha/Tutorials/DSGE/Tutorial1/fwz.rs [indx_model=0]  n=5 h=2 mfi radius=0.7133 | RISE: ss diff 0.0e+00, IRF diff 1.1e-07 (scale 2.4e+00) ES->PAI r2
+   VariousModels/TaoZha/Tutorials/DSGE/Tutorial1/fwz.rs [indx_model=1]  n=5 h=2 mfi radius=0.6972 | RISE: ss diff 0.0e+00, IRF diff 6.9e-08 (scale 1.8e+00) ES->PAI r2
+   VariousModels/TaoZha/Tutorials/DSGE/Tutorial1/fwz.rs [indx_model=2]  n=5 h=2 mfi radius=0.6972 | RISE: ss diff 0.0e+00, IRF diff 3.4e-13 (scale 1.5e+00) ES->PAI r1
+   VariousModels/TaoZha/Tutorials/DSGE/Tutorial1/fwz.rs [indx_model=3]  n=5 h=2 mfi radius=0.6972 | RISE: ss diff 0.0e+00, IRF diff 2.2e-08 (scale 1.2e+00) ES->PAI r2
+   VariousModels/TaoZha/Tutorials/DSGE/Tutorial2/Models/policyOnly.rs  n=5 h=2 mfi radius=0.7225 | RISE: ss diff 0.0e+00, IRF diff 6.0e-08 (scale 1.4e+00) ES->PAI r2
+   VariousModels/TaoZha/Tutorials/DSGE/Tutorial2/Models/volatilityOnly.rs  n=5 h=2 mfi radius=0.7225 | RISE: ss diff 0.0e+00, IRF diff 1.3e-12 (scale 1.1e+00) ES->R r2
+   VariousModels/TaoZha/Tutorials/DSGE/Tutorial2/Models/volatilityPolicyIndependent.rs  n=5 h=4 mfi radius=0.7225 | RISE: ss diff 0.0e+00, IRF diff 1.4e-07 (scale 3.4e+00) ES->PAI r4
+   VariousModels/TaoZha/Tutorials/DSGE/Tutorial2/Models/volatilityPolicyIndependent_2.rs  n=5 h=4 mfi radius=0.7225 | RISE: ss diff 0.0e+00, IRF diff 1.4e-07 (scale 3.4e+00) ES->PAI r4
+   VariousModels/TaoZha/Tutorials/DSGE/Tutorial2/Models/volatilityPolicySame.rs  n=5 h=2 mfi radius=0.7225 | RISE: ss diff 0.0e+00, IRF diff 1.4e-07 (scale 3.4e+00) ES->PAI r2
+   VariousModels/TaoZha/Tutorials/DSGE/Tutorial3/Models/svar_constant.rs  n=5 h=1 mfi radius=0.3570 | RISE: ss diff 0.0e+00, IRF diff 1.4e-17 (scale 1.0e-01) EI->I r1
+   VariousModels/TaoZha/Tutorials/DSGE/Tutorial3/Models/svar_policy.rs  n=5 h=2 mfi radius=0.3570 | RISE: ss diff 0.0e+00, IRF diff 1.6e-17 (scale 1.0e-01) EPAI->PAI r2
+   VariousModels/TaoZha/Tutorials/DSGE/Tutorial3/Models/svar_policy_volatility.rs  n=5 h=4 mfi radius=0.3570 | RISE: ss diff 0.0e+00, IRF diff 3.6e-17 (scale 1.0e-01) EPAI->PAI r1
+   VariousModels/TaoZha/Tutorials/DSGE/Tutorial3/Models/svar_volatility.rs  n=5 h=2 mfi radius=0.3570 | RISE: ss diff 0.0e+00, IRF diff 1.4e-17 (scale 1.0e-01) EI->I r1
+   VariousModels/frb/EDO/edo.rs  n=97 h=1 mfi radius=0.9599 | RISE: ss diff 0.0e+00, IRF diff 1.0e-07 (scale 1.6e+03) eLpref->unemp_obs r1
+   VariousModels/stata/model01.rs  n=5 h=1 mfi radius=0.2500 | RISE: ss diff 0.0e+00, IRF diff 8.9e-13 (scale 2.8e+00) EU->R r1
+   VariousModels/stata/model02.rs  n=5 h=1 mfi radius=0.2500 | RISE: ss diff 0.0e+00, IRF diff 1.2e-12 (scale 2.3e+00) EU->X r1
+   VariousModels/stata/model03.rs  n=9 h=1 mfi radius=0.8569 | RISE: ss diff 0.0e+00, IRF diff 1.4e-11 (scale 4.3e+00) EZ->X r1
+   VariousModels/stata/model04.rs  n=7 h=1 mfi radius=0.2500 | RISE: ss diff 0.0e+00, IRF diff 7.3e-14 (scale 1.4e-01) EE->R r1
+   VariousModels/stata/model05.rs  n=3 h=1 mfi radius=0.2500 | RISE: ss diff 0.0e+00, IRF diff 4.6e-15 (scale 1.0e-01) EW->C r1
+   VariousModels/stata/model06.rs  n=5 h=1 mfi radius=0.2500 | RISE: ss diff 0.0e+00, IRF diff 6.6e-14 (scale 1.6e-01) EU->P r1
+   VariousModels/stata/model08.rs  n=5 h=1 mfi radius=0.2500 | RISE: ss diff 0.0e+00, IRF diff 2.6e-14 (scale 1.1e-01) ER->C r1
+   VariousModels/stata/model09.rs  n=5 h=1 mfi radius=0.5000 | RISE: ss diff 0.0e+00, IRF diff 3.0e-14 (scale 1.0e-01) EW->C r1
+   VariousModels/stata/model10.rs  n=6 h=1 mfi radius=0.2500 | RISE: ss diff 0.0e+00, IRF diff 4.8e-14 (scale 1.7e-01) EG->R r1
+   VariousModels/stata/model11.rs  n=4 h=1 mfi radius=0.2500 | RISE did not solve: Maximum Number of iterations reached or multiple solutions
+   VariousModels/stata/model12.rs  n=5 h=1 mfi radius=0.2500 | RISE: ss diff 0.0e+00, IRF diff 4.8e-14 (scale 1.7e-01) EU->R r1
+   endogenousPriors/NKperspective_JMCB2011/nkp.rs  n=15 h=1 mfi radius=0.5625 | RISE: ss diff 0.0e+00, IRF diff 8.3e-13 (scale 3.0e-01) EPS_A->LAMBDA r1
+   steady_state_operator/tshocksnk.rs  n=9 h=1 mfi radius=0.9264 | RISE did not solve: Error using parser.capture_equations Error: Invalid text character. Check for unsupported 
+   occbin/oneConstraint/occbin.rz  n=15 h=2 mnk (mfi failed) radius=0.8100 | reference regime only; the comparison with RISE is the one in msdsge.occbin
+
+== fragment or file without calibration (not a complete model): 17 of 99 cases
+   MarkovSwitching/FoersterRubioRamirezWaggonerZha/wp1301/rbcns.rs  no calibration: no example driver uses the file
+   VariousModels/TaoZha/Tutorials/DSGE/Tutorial1/param_original.rs  included by Tutorial1/fwz.rs
+   VariousModels/TaoZha/Tutorials/DSGE/Tutorial1/param_policyChangeOnly.rs  included by Tutorial1/fwz.rs
+   VariousModels/TaoZha/Tutorials/DSGE/Tutorial1/param_privateChangeOnly.rs  included by Tutorial1/fwz.rs
+   VariousModels/TaoZha/Tutorials/DSGE/Tutorial1/param_volatilityChangeOnly.rs  included by Tutorial1/fwz.rs
+   VariousModels/TaoZha/Tutorials/DSGE/Tutorial1/switching_policy_parameters.rs  parameter fragment; no file includes it
+   VariousModels/TaoZha/Tutorials/DSGE/Tutorial2/Models/constant_policy_parameters.rs  included by the Tutorial2 models
+   VariousModels/TaoZha/Tutorials/DSGE/Tutorial2/Models/constant_volatility.rs  included by the Tutorial2 models
+   VariousModels/TaoZha/Tutorials/DSGE/Tutorial2/Models/fwz_est.rs  included by the Tutorial2 models
+   VariousModels/TaoZha/Tutorials/DSGE/Tutorial2/Models/switching_policy_parameters_coefChain.rs  included by the Tutorial2 models
+   VariousModels/TaoZha/Tutorials/DSGE/Tutorial2/Models/switching_policy_parameters_volChain.rs  included by the Tutorial2 models
+   VariousModels/TaoZha/Tutorials/DSGE/Tutorial2/Models/switching_volatility.rs  included by the Tutorial2 models
+   VariousModels/TaoZha/Tutorials/DSGE/Tutorial3/Models/constant_policy.rs  included by the Tutorial3 models
+   VariousModels/TaoZha/Tutorials/DSGE/Tutorial3/Models/constant_volatility.rs  included by the Tutorial3 models
+   VariousModels/TaoZha/Tutorials/DSGE/Tutorial3/Models/svar_core.rs  included by the Tutorial3 models
+   VariousModels/TaoZha/Tutorials/DSGE/Tutorial3/Models/switching_policy.rs  included by the Tutorial3 models
+   VariousModels/TaoZha/Tutorials/DSGE/Tutorial3/Models/switching_volatility.rs  included by the Tutorial3 models
+
+== ok (not MSS): 3 of 99 cases
+   StochasticReplanning/FurherMoore95/fm95_ms_lc.rs  n=18 h=1 mfi radius=1.0000
+   VariousModels/stata/model07.rs  n=6 h=1 mfi radius=1.0000 | RISE: ss diff 0.0e+00, IRF diff 1.6e-10 (scale 3.3e+00) EZ->R r1
+   occbin/multipleConstraints/ig2017.rs  n=47 h=4 mnk (mfi failed) radius=1.0101 | reference regime only; the comparison with RISE is the one in msdsge.occbin
+
+== steady state: 1 of 99 cases
+   VariousModels/PeterIreland/Endogenous_JME2003/emosp_ns.rs  SteadyStateError: steady state not found in regime 1 (maximum residual 2.00e+00); provide 'guess' or steady_state_model
+
+== convert: 1 of 99 cases
+   VariousModels/PeterIreland/sgusea_JEEA2013/sgusea1.rs  RuntimeError: no RISE reference to tabulate the steady state of the .m file

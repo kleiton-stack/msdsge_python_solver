@@ -1,0 +1,35 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "msdsge"
+version = "0.1.0"
+description = "Solution and estimation of Markov-switching DSGE models"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = ["numpy", "scipy", "sympy", "pandas"]
+keywords = ["DSGE", "Markov switching", "regime switching", "macroeconomics", "Bayesian estimation", "perturbation"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Science/Research",
+    "Programming Language :: Python :: 3",
+    "Topic :: Scientific/Engineering",
+]
+
+[project.urls]
+Repository = "https://github.com/kleiton-stack/msdsge_python_solver"
+Changelog = "https://github.com/kleiton-stack/msdsge_python_solver/blob/main/CHANGELOG.md"
+
+[project.optional-dependencies]
+dev = ["pytest"]
+fast = ["numba"]
+plot = ["matplotlib"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+markers = ["slow: long-running tests (run with -m slow)"]
+addopts = "-m 'not slow'"
